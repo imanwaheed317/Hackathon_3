@@ -1,21 +1,12 @@
-// This is my Payment page , Made by Asim Aziz //
-
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/component/ui/card'
+import { Card, CardContent,CardDescription,CardFooter,CardHeader,CardTitle,} from '@/component/ui/card'
 import { Input } from '@/component/ui/input'
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className='payment w-full bg-[#f6f7f9] p-4 sm:p-6  flex flex-wrap gap-6 justify-center font-[family-name:var(--font-geist-sans)]'>
+    <div className=' w-[220px] sm:p-6  flex flex-wrap gap-6 justify-center font-[family-name:var(--font-geist-sans)]'>
       <div className='cards w-full md:w-[70%] grid grid-cols-1 gap-6 order-2 lg:order-1'>
         <Card className='w-full lg:w-[852px] h-auto lg:h-[336px] flex flex-col justify-around'>
           <CardHeader>
@@ -186,8 +177,20 @@ export default function Page() {
               width={804}
               height={308}
             />
-            <Image src={"/PayPal.png"} alt='PayPal' width={804} height={56} />
-            <Image src={"/Bitcoin.png"} alt='Bitcoin' width={804} height={56} />
+             <div className="flex items-center space-x-4  ml-10 ">
+      <input type="radio" name="paymentMethod" id="paypal" />
+      <label htmlFor="paypal" className="flex items-center space-x-[590px]">
+        <span>PayPal</span>
+        <Image src="/PayPal.png" alt="PayPal" width={70} height={122} className="h-6" />
+      </label>
+    </div>
+    <div className="flex items-center space-x-4 mb-6 ml-10">
+      <input type="radio" name="paymentMethod" id="bitcoin" />
+      <label htmlFor="Bitcoin" className="flex items-center space-x-[590px] ">
+        <span>Bitcoin</span>
+        <Image src="/Bitcoin.png" alt="Bitcoin" width={65 } height={120} className="h-6 mr-48" />
+      </label>
+    </div>
           </CardContent>
         </Card>
 
@@ -209,11 +212,11 @@ export default function Page() {
               width={804}
               height={136}
             />
-            <Link href={"/admin"}>
-              <button className='bg-[#3563e9] p-2 text-white rounded-xl w-[140px] h-[56px]'>
-                Rent Now
-              </button>
-            </Link>
+         <Link href={'/admin'}>
+            <button className="bg-[#3563e9] p-2 text-white rounded-xl w-[140px] h-[56px]">
+              Rent Now
+            </button></Link>
+    
 
             <Image
               src={"/Safe Data.png"}
@@ -224,15 +227,17 @@ export default function Page() {
           </CardContent>
         </Card>
       </div>
-      <div className='details w-full flex-shrink-0 lg:w-[40%] order-1 lg:order-2 flex justify-center'>
-        <Image
-          src={"/Rental Summary.png"}
-          alt='Rental Summary'
-          width={492}
-          height={568}
-          className=' lg:w-[492px] h-[568px]'
-        />
-      </div>
+      <div 
+  className='w-[800px] pt-40 flex-shrink-0 lg:w-[40%] order-1 lg:order-2 flex justify-center relative lg:absolute lg:top-4 lg:right-4'>
+  <Image
+    src={"/Rental Summary.png"}
+    alt='Rental Summary'
+    width={492}
+    height={568}
+    className='lg:w-[492px] h-[568px]'
+  />
+</div>
+
       <CardFooter />
     </div>
   );

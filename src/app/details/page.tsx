@@ -1,5 +1,3 @@
-// This is my Car details page , Made by Asim Aziz //
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +14,74 @@ export default function page() {
   return (
     <div className='w-full flex'>
       <div className='first hidden sm:flex w-[25%]'>
-        <Image src={"/Nav Bar Side.png"} alt='' width={360} height={1600} />
+
+      <div className="w-[350px] h-[1350px] bg-white shadow-md p-4 overflow-y-auto ">
+        {/* Section - Type */}
+        <div className="mb-9 mt-5 ml-4">
+          <h3 className="font-semibold text-gray-500 mb-6 text-[10px]">TYPE</h3>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-2">
+              <input type="checkbox" id="sport" className="w-4 h-4 text-blue-500 focus:ring-blue-500" />
+              <label htmlFor="sport" className="text-gray-800 font-semibold">Sport <span className="text-gray-400">(10)</span></label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <input type="checkbox" id="suv" className="w-4 h-4 text-blue-500 focus:ring-blue-500" />
+              <label htmlFor="suv" className="text-gray-800 font-semibold">SUV <span className="text-gray-400">(12)</span></label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <input type="checkbox" id="mpv" className="w-4 h-4 text-blue-500 focus:ring-blue-500" />
+              <label htmlFor="mpv" className="text-gray-800 font-semibold">MPV <span className="text-gray-400">(16)</span></label>
+            </div>
+            <div className="flex items-center space-x-2">
+        <input type="checkbox" id="mpv" className="w-4 h-4 text-blue-500 focus:ring-blue-500" />
+        <label htmlFor="mpv" className="text-gray-800 font-semibold">Sedan <span className='text-gray-400'>(20)</span></label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <input type="checkbox" id="mpv" className="w-4 h-4 text-blue-500 focus:ring-blue-500" />
+        <label htmlFor="mpv" className="text-gray-800 font-semibold">Cuope <span className='text-gray-400'>(14)</span></label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <input type="checkbox" id="mpv" className="w-4 h-4 text-blue-500 focus:ring-blue-500" />
+        <label htmlFor="mpv" className="text-gray-800 font-semibold">Hatchback <span className='text-gray-400'>(14)</span></label>
+      </div>
+          </div>
+        </div>
+
+        {/* Section - Capacity */}
+        <div className="mb-6 ml-5">
+          <h3 className="font-semibold text-gray-500 mb-6 text-[10px]">Capacity</h3>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-2">
+              <input type="checkbox" id="2person" className="w-4 h-4 text-blue-500 focus:ring-blue-500" />
+              <label htmlFor="2person" className="text-gray-800">2 Person <span className="text-gray-400">(10)</span></label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <input type="checkbox" id="4person" className="w-4 h-4 text-blue-500 focus:ring-blue-500" />
+              <label htmlFor="4person" className="text-gray-800">4 Person <span className="text-gray-400">(14)</span></label>
+            </div>
+
+            <div className="flex items-center space-x-2">
+        <input type="checkbox" id="6person" className="w-4 h-4 text-blue-500 focus:ring-blue-500" />
+        <label htmlFor="6person" className="text-gray-800">6 Person <span className='text-gray-400'>(12)</span></label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <input type="checkbox" id="6person" className="w-4 h-4 text-blue-500 focus:ring-blue-500" />
+        <label htmlFor="6person" className="text-gray-800">8 or More <span className='text-gray-400'>(16)</span></label>
+      </div>
+    </div>
+          
+        </div>
+
+        {/* Section - Price */}
+        <div className="ml-5 mb-4">
+          <h3 className="font-semibold text-gray-500 mb-4 text-[10px]">Price</h3>
+          <div className="flex flex-col space-y-2">
+            <Image src="/per.png" alt="Price Range" width={280} height={12} />
+            <p className="text-gray-800">Max. $100.00</p>
+          </div>
+        </div>
+      </div>
+
       </div>
       <div className='sec w-full sm:w-[75%] bg-[#f6f7f9] p-4 sm:p-6  flex flex-col gap-10 font-[family-name:var(--font-geist-sans)]'>
         <section className=' w-full flex flex-col md:flex-row gap-5  items-center justify-around'>
