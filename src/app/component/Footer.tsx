@@ -1,6 +1,4 @@
 import React from 'react';
-import { FaDiscord, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
-
 export default function Footer() {
   return (
     <div className=" pt-16 relative flex flex-col items-center justify-center gap-6 px-5 w-full bg-white py-6 space-y-10">
